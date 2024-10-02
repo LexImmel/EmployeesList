@@ -1,9 +1,6 @@
 package org.homework.employeelist.service;
 
 import org.homework.employeelist.Employee;
-import org.homework.employeelist.exceptions.EmployeeAlreadyAddedException;
-import org.homework.employeelist.exceptions.EmployeeNotFoundException;
-import org.homework.employeelist.exceptions.EmployeeStorageIsFullException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,11 +9,11 @@ import java.util.List;
 
 public interface EmployeeService {
 
-    Employee addEmployee(String name, String surname) throws EmployeeStorageIsFullException, EmployeeAlreadyAddedException;
+    Employee addEmployee(String name, String surname);
 
-    Employee removeEmployee(String name, String lastName) throws EmployeeNotFoundException;
+    Employee removeEmployee(String name, String lastName);
 
-    Employee findEmployee(String name, String lastName) throws EmployeeNotFoundException;
+    Employee findEmployee(String name, String lastName);
 
     List<Employee> getAllEmployees();
 }

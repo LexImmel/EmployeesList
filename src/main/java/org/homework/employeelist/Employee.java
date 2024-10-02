@@ -20,10 +20,6 @@ public class Employee {
         return surname;
     }
 
-    public String getFullName() {
-        return surname + " " + name;
-    }
-
 
     @Override
     public String toString() {
@@ -42,5 +38,6 @@ public class Employee {
     public int hashCode() {
         return Objects.hash(surname, name);
     }
+
 
 }
